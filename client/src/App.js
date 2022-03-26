@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Homepage from './Homepage';
-import Login from './Login';
-import OwnerRegister from './OwnerRegister';
-import UserRegister from './UserRegister';
-import BookaSlot from './BookaSlot';
+import Homepage from './Components/Homepage';
+import Login from './Components/Login';
+import Ownerlogin from './Components/ownerlogin';
+import OwnerRegister from './Components/OwnerRegister';
+import UserRegister from './Components/UserRegister';
+import BookaSlot from './Components/BookaSlot';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 class ProtectedRoute extends Component {
   render() {
     const { component: Component, ...props } = this.props
-
     return (
       <Route 
         {...props} 
@@ -22,10 +22,7 @@ class ProtectedRoute extends Component {
     )
   }
 }
-
-
 class App extends Component { 
-
   render() {
     return (
       <div className="App">
@@ -33,15 +30,8 @@ class App extends Component {
         <Switch>
 
           <Route path="/" exact component={Homepage} />
-          <Route path="/login" exact component={Login} />
+          <Route path="/userlogin" exact component={Login} />
+          <Route path="/ownerlogin" exact component={Ownerlogin}/>
           <Route path="/ownerregister" exact component={OwnerRegister} />
           <Route path="/userregister" exact component={UserRegister} />
           <ProtectedRoute path="/bookaslot" exact component={BookaSlot} />
-        </Switch>
-      </BrowserRouter>
-      </div>
-    );
-  }
-}
-
-export default App;
