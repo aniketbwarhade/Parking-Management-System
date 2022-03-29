@@ -1,0 +1,50 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* .homepage {
+    background-image: url('https://miro.medium.com/max/1080/1*MEeIEhTP56vE1TW8fht5nQ.jpeg');
+    height:100vh;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-color: #464646;
+} */
+
+.homepage {
+    height: 70vh;
+}
+
+.font {
+    color: whitesmoke;
+    margin-top: 12%;
+    margin-left: 10%;
+    font-style: oblique;
+}
+
+.btn {
+    height: auto;
+    width: auto;
+    background-color: lightseagreen;
+    font-size: large;
+    font-weight: 600;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+img {
+    opacity: 1.0;
+}
+
+img:hover {
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 800px) {
+    .image {
+        display: none;
+    }
+}
